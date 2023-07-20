@@ -1,0 +1,12 @@
+# https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules/EC2ImageBuilderGoldenAMI
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: EC2 Image Builder GoldenAMI module
+
+Resources:
+  ExampleImagePipeline:
+    Type: 'AWSSamples::EC2ImageBuilder::GoldenAMI::MODULE'
+    Properties:
+      OrganizationBusinessUnitName: !Ref OrganizationBusinessUnitName
+      OrganizationName: !Ref OrganizationName
+      ParentImage: !Ref ParentImage

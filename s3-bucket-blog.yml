@@ -1,0 +1,12 @@
+# https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules/S3BucketBlog
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: Template consuming S3 Bucket Blog Module
+
+Resources:
+    Bucket: 
+      Type: AWSSamples::S3::Bucket::MODULE
+      Properties:
+        KMSKeyAlias: MyKeyAlias
+        ReadOnlyArn: arn:aws:iam::123456789012:role/bucket-read-arn
+        ReadWriteArn: arn:aws:iam::123456789012:role/bucket-read-write-arn

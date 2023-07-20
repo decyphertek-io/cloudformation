@@ -1,0 +1,14 @@
+# https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules/VpcWizard
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: Template consuming VPC Wizard module
+
+Resources:
+    MyVPC: 
+      Type: AWSSamples::net::vpcwizard::MODULE
+      Properties:
+        CidrBlock: x.x.x.x/16
+        NumberOfAZs: 1|2|3
+        PrivateSubnetOutboundConnectivity: True|False
+        VpcFlowLogDestination: None|CloudWatchLogs|S3
+        EnablePrivateSessionManager: True|False
